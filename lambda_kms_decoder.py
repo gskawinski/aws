@@ -29,6 +29,15 @@ logger.setLevel(logging.INFO)
 
 logger.info("Loading function")
 
+# # basic usage
+# def lambda_handler(event, context):
+#     encrypted = os.environ["ENCRYPTED_VALUE"]
+#     decrypted = boto3.client("kms").decrypt(CiphertextBlob=b64decode(encrypted))[
+#         "Plaintext"
+#     ]
+#     decrypted = decrypted.decode()
+#     logger.info(f"encrypted: {encrypted} decrypted: {decrypted}")
+
 
 def lambda_handler(event, context):
     try:
